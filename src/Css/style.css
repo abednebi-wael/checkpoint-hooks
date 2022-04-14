@@ -1,0 +1,317 @@
+body {
+  background-color: #091021;
+}
+
+.home_page {
+  text-align: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+.home_page h1 {
+  color: #d54d7b; font-family: 'Great Vibes', sans-serif; font-size: 275px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
+
+ }
+ .home_page h2 {
+ color :rgb(238, 229, 229) ;  font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center; 
+ }
+
+/*NavBar*/
+
+
+/*SearchBar*/
+.search-mov {
+  margin-top: 100px;
+}
+
+.search-mov {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+/*Movies Card  */
+
+.movies-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 150px;
+  margin-left: 100px;
+  
+}
+.movies-card h1 {
+  color: blue;
+  font-size: 19px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 5px;
+}
+.movies-card h2 {
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-style: oblique;
+  font-weight: bold;
+  text-justify: auto;
+}
+.movies-card img {
+  
+  border: 1px solid red;
+  width: 260px;
+  height: 280px;
+  border-radius: 40px;
+border-bottom: none;
+}
+
+.title-rating {
+  display: flex;
+  justify-content: space-between;
+}
+.title-rating h3 {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  color: #fff;
+}
+.card-body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.reactstar {
+  display: flex;
+  justify-content: center;
+}
+
+/*Btn-ADD*/
+
+.mb-3 {
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+  font-style: oblique;
+  font-weight: bold;
+  background-color: rgb(238, 229, 229);
+}
+.btn-sav {
+  background-color: gray;
+}
+.btn-add {
+  background-color: grey;
+  color: white;
+}
+
+/* CSS btn-56*/
+.button-56 {
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  outline: 0;
+}
+#link {
+  text-decoration: none;
+}
+.button-56:hover {
+  outline: 0;
+}
+
+.btn-mod {
+  margin-left: 30%;
+  color: rgb(46, 41, 41);
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  font-style: oblique;
+  font-weight: bold;
+  text-shadow: #161616 0.2px 1px 1px;
+}
+
+/*Contact Us  */
+
+.contact h2 {
+  font-family: sans-serif;
+  color: aqua;
+}
+.contact {
+  padding-top: 250px;
+  margin-left: 380px;
+  text-align: center;
+  width: 50%;
+  
+}
+.titleName {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  padding: 0 20px;
+  padding-top: 10px;
+  font-variant: small-caps;
+  text-align: center;
+  font-weight: bold;
+}
+/*Footer*/
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+/*Trailer*/
+.MovieTrailer {
+  padding-top: 200px;
+}
+.imgvid {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+.MovieTrailer p {
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+  width: 40%;
+  padding-top: 15px;
+}
+.MovieTrailer button {
+  margin-left: 50%;
+}
+.trailerdescrip {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 70px;
+}
+
+.trailerdescrip h1 {
+  color: white;
+  font-size: 40px;
+  margin-left: 40px;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 5px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.trailerdescrip p{
+  color: white;
+}
+/* CSS btn-54*/
+.button-54 {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+.btn-back {
+  display: flex;
+  justify-content: space-between;
+  width: 5%;
+  margin-left: 350px;
+}
+
+/* CSS */
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+.card-text{
+left: 50px;
+  
+}
+.card{
+  display: flex;
+}
+.titleName{ 
+  color: #b48608; font-family: 'Droid serif', serif; font-size: 36px; font-weight: 400; font-style: italic; line-height: 44px; margin: 0 0 12px; text-align: center; 
+}
+.card-text p a {
+  color: #d54d7b;
+}
