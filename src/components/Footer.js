@@ -4,7 +4,7 @@ function Footer(props) {
   return (
     <div>
       <footer>
-        <p>Copyritghts &copy; Disney Classic Movies {props.x}</p>
+        <p>Copyritghts &copy; Watch groups {props.x}</p>
       </footer>
     </div>
   );
