@@ -3,7 +3,7 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import Add from "./Add";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-function Home(Movies, setMovies) {
+function NavBar() {
   return (
     <div className="home-page">
       <>
@@ -30,16 +30,16 @@ function Home(Movies, setMovies) {
                 <NavDropdown.Item href="#action/3.3">Love story</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
-                  <Add className Movies="movies" setMovies="setMovies" />
+                  <Add />
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#contact">About Us</Nav.Link>
             </Nav>
-            <Add Movies="movies" setMovies="setMovies" />
+            <Add  />
           </Container>
         </Navbar>
       </>
     </div>
   );
 }
-export default Home;
+export default NavBar;

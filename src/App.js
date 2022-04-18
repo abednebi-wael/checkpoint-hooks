@@ -1,5 +1,5 @@
 import MoviesCard from "./components/MoviesCard";
-import Home from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import React from "react";
@@ -20,22 +20,20 @@ import poster11 from "./Images/The Lion King.jpg";
 import poster12 from "./Images/saga.jpg";
 import { useState } from "react";
 import RatingComp from "./components/Rating";
-import {Route} from "react-router-dom"
+import { Route, Routes } from "react-router-dom";
 import HomePage from "./components/Home";
 import Trailer from "./components/Trailer";
 
-
-
 function App() {
-  const [FilterName, setFilterName] = useState("");
-  const [Rating, setRating] = useState("");
-  const [Movies, setMovies] = useState([
+  const [filterName, setFilterName] = useState("");
+  const [rating, setRating] = useState("");
+  const [movies, setMovies] = useState([
     {
       id: 0,
       title: "Scooby doo",
       description:
         "Scooby-Doo (also known as Scooby-Doo: The Movie) is a 2002 live action / computer animated fantasy adventure - comedy film based on the long-running Hanna-Barber. ",
-      postUrl : poster1,
+      postUrl: poster1,
       rating: "4",
       genre: "Comedy",
       trailer: "https://youtu.be/o3dbeI0BU1k",
@@ -155,31 +153,33 @@ function App() {
 
   return (
     <div className="App">
-      <Home Movies="movies" setMovies="setMovies" />
+      <NavBar/>
 
-      <Route exact path="/" component={HomePage} />
+      <Routes>
+        <Route  path="/" element={<HomePage />} />
+        <Route
+          path="/trailer/:id"
+          element={<Trailer movies={movies} />}
+        />
+
+        <Route
+          path="/movies"
+          element={
+            <MoviesCard
+              movies={movies}
+              filterName={filterName}
+              rating={rating}
+            />
+          }
+        />
+      </Routes>
 
       <Search setFilterName={setFilterName} />
       <RatingComp setRating={setRating} />
-      <Route
-        path="/movies"
-        render={() => (
-          <MoviesCard Movies={Movies} FilterName={FilterName} Rating={Rating} />
-        )}
-      />
-      <Route
-        exact path="/trailer/:id"
-        render={(props) => <Trailer Movies={Movies} {...props} />}
-      />
       <Contact />
       <Footer />
     </div>
   );
-
 }
-  
 
 export default App;
-
-
-

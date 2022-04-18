@@ -4,13 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 
-function MoviesCard({ Movies, FilterName, Rating }) {
+function MoviesCard({ movies, filterName, rating }) {
   return (
     <div className="movies-card">
-      {Movies.filter(
+      {movies.filter(
         (el) =>
-          el.title.toUpperCase().includes(FilterName.toUpperCase()) &&
-          el.rating >= Rating
+          el.title.toUpperCase().includes(filterName.toUpperCase()) &&
+          el.rating >= rating
       ).map((el) => (
         <div className="movies-col">
           <img src={el.postUrl} />
@@ -30,7 +30,7 @@ function MoviesCard({ Movies, FilterName, Rating }) {
                 <h2>{el.description}</h2>
               </Card.Text>
               <Card.Text>
-                <Link to={`/Trailer/${el.id}`}>
+                <Link to={`/trailer/${el.id}`}>
                   <button class="button-54" role="button">Trailer</button>
                 </Link>
               </Card.Text>

@@ -1,31 +1,47 @@
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-import React from 'react'
+function Trailer({ movies }) {
+  const [movie, setMovie] = useState({});
 
+  const { id } = useParams();
+  const location = useLocation()
+  const navigate = useNavigate()
 
-function Trailer(props) {
-  const Movie = props.Movies.find((el) => el.id == props.match.params.id);
-  
+  console.log(location)
 
-    return (
-      <div className="MovieTrailer">
-        <div className="imgvid">
-          <img src={Movie.postUrl} />
-          <iframe width="800" height="500" src={Movie.trailer}></iframe>
-        </div>
-        <div className="trailerdescrip">
-          <h1>{Movie.genre}</h1>
-          <p>{Movie.description}</p>
-        </div>
-        <div className="btn-back">
-          <button className="button-74" onClick={() => props.history.goBack()}>
-            Go Back
-          </button>
-         
-          <button className="button-74" onClick={() => props.history.push("/")}>
-            Home
-          </button>
-        </div>
+  const findMovie = () => {
+    setMovie(movies.find((el) => el.id == id));
+  };
+
+  useEffect(() => {
+    findMovie();
+  }, []);
+
+  return (
+    <div className="MovieTrailer">
+      <div className="imgvid">
+        <img src={movie.postUrl} />
+        <iframe
+          width="941"
+          height="530"
+          src={movie.trailer}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>{" "}
       </div>
-    );
-    }
-export default Trailer 
+      <div className="trailerdescrip">
+        <h1>{movie.genre}</h1>
+        <p>{movie.description}</p>
+      </div>
+      <div className="btn-back">
+        <button className="button-74"  onClick={() => navigate(-1)}>Go Back</button>
+
+        <button className="button-74"  onClick={() => navigate('/')}>Home</button>
+      </div>
+    </div>
+  );
+}
+export default Trailer;
